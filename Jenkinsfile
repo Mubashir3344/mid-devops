@@ -12,7 +12,7 @@ pipeline {
         stage('Train Model') {
             steps {
                 echo 'Training the model...'
-                sh 'python3 train.py'
+                sh '/usr/bin/python3 train.py'
             }
         }
 
