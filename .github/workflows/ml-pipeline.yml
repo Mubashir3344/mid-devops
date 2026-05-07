@@ -1,0 +1,17 @@
+name: ML Pipeline
+
+on:
+  push:
+    paths:
+      - 'dataset/**'
+
+jobs:
+  train-and-deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run pipeline
+        run: bash pipeline.sh
